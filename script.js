@@ -1,14 +1,26 @@
-// const labels = document.querySelectorAll(".form-control label");
+const toggle = document.querySelector('.toggle');
 
-// labels.forEach((label) => {
-//   label.innerHTML = label.innerText
-//     .split("")
-//     .map(
-//       (letter, idx) => `<span
-//     style="transition-delay:${idx * 50}ms"
-//     >${letter}</span>`
-//     )
-//     .join("");
-// });
 
- 
+const days = ['Sunday','Monday',"Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+
+toggle.addEventListener('click',(e)=>{
+  const html= document.querySelector('html')
+
+  if(html.classList.contains('dark')){
+    html.classList.remove('dark')
+    e.target.innerHTML='Dark mode'
+  }
+  else{
+    html.classList.add('dark')
+    e.target.innerHTML='Light mode'
+  }
+})
+
+
+function setTime(){
+  const time = new Date();
+  console.log(time)
+}
